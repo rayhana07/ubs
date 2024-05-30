@@ -1,0 +1,98 @@
+
+   html, body{ 
+    height: 100%;
+    margin: 0;/* Suppriner les marges*/ 
+     padding: 0;/* Supprimer les espacement*/ 
+     }
+     body {
+      font-family: Agial;
+       display: flex;
+       flex-direction: column; 
+       background-color: white;
+    }
+     header, footer{
+        background-color:#004d00;
+         color: white;
+          text-align: center;
+           padding:  20px; 
+           }
+
+    header{
+        font-size: 32px;
+    }
+    footer{
+        font-size: 16px;
+    }
+    .container{
+        flex: 1;
+        display: grid;/*concevoir une page avec des lignes et colonnes */
+        width: 100%;
+        margin: 0;
+
+    }
+    nav, article {
+        padding: 20px;
+    }
+    nav{
+        background: whitesmoke;
+        flex: 1;
+        font-size: 15px;
+    }
+    article{
+        background-color: white;
+        font-size: 18px;
+
+    }
+    nav u1 {
+        list-style-type: none;/*supprimer les puces ou numéros par défaut (ordonnée ou non */
+        padding: 0;
+
+    }
+    nav u1 li {
+        flex: 1;
+    }
+    nav u1 li a {
+        color: black;
+        font-size: 18px;
+        padding: 1px solid whitesmoke ;
+        border-radius: 5px;
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;/*La largeur  et la hauteur incluent les bordures et les espacements internes */
+        
+    }
+    nav u1 li a:hover{
+        background-color:#004d00;
+        color: white;
+    }
+    .btn{
+        display: inline-block; /* chaque element en ligne*/
+        padding: 15px 25px; 
+        margin :5px 0; 
+        font-size: 18px;
+        text-align: center;
+        color: white;
+        background-color: #004d00;
+        border-radius: 5px;/*coins arrondis */
+        text-decoration: none;/*enlever le soulignement du texte */
+
+    }
+    .btn:hover {
+        background-color: #003300;
+
+    }
+    @media(min-width:600px){/*régle de media appliquée lorsque la largeur de l'ecran est d'au moins 600pixels*/
+    .container{
+        grid-template-columns: 20% 80%;
+        grid-template-rows:none ; /*aucune ligne*/
+    }
+    nav{
+        order: 1;/*placé en premier dans l'ordre de la grille */ 
+    }
+    article{
+        order:2;
+
+    }
+      }
+
+
